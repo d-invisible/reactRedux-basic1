@@ -3,17 +3,19 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # or 'master' if that's your default
+      - main
+
+permissions:
+  contents: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Code
+      - name: Checkout 🛎️
         uses: actions/checkout@v3
 
-      - name: Set up Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
@@ -25,9 +27,6 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        run: |
-          git config --global user.email "github-actions@github.com"
-          git config --global user.name "github-actions"
-          npm run deploy
+        run: npm run deploy
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
