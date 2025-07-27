@@ -1,6 +1,6 @@
 # React + Vite
-## ReactJS-TailwindCSS-ShadCN
+## Vanilla Redux
 
-### Vanilla Redux
+### ReactJS-TailwindCSS-ShadCN
 
 Counter and User reducers
