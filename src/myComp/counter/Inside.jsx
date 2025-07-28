@@ -8,7 +8,6 @@ const Inside = () => {
     <>
       <h1 className="mb-4 text-6xl text-blue-500">{user.name}</h1>
       <h1 className="mb-4 text-4xl">{counter.count}</h1>
-      <p className="text-6xl">Dinakar</p>
     </>
   );
 };
